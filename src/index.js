@@ -1,12 +1,4 @@
-import printMe from './print.js';
+import buildPage from './pageLoad.js';
 
-function component() {
-    const element = document.createElement('div')
-    element.textContent = "hi"
-
-    return element
-}
-
-document.body.appendChild(component())
-printMe()
-console.log("Webpack test 2")
+document.body.appendChild(buildPage())
+console.log("Webpack test 1")
