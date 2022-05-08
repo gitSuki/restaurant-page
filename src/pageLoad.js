@@ -1,9 +1,9 @@
 export default function buildPage(){
     const pageDiv = document.createElement('div')
-
     pageDiv.appendChild(buildTopBar())
     pageDiv.appendChild(buildNav())
     pageDiv.appendChild(buildContent())
+    pageDiv.appendChild(buildFooter())
 
     return pageDiv
 }
@@ -34,7 +34,7 @@ function buildTopBar(){
 
     const socialMedia = document.createElement('div')
     socialMedia.textContent = "Icon"
-    emailContainer.appendChild(socialMedia)
+    socialMediaContainer.appendChild(socialMedia)
 
     return topBar
 }
@@ -87,4 +87,24 @@ function buildContent(){
     content.appendChild(menuLink)
 
     return content
+}
+
+function buildFooter(){
+    const footer = document.createElement('div')
+
+    const footerContainer = document.createElement('div')
+    footer.appendChild(footerContainer)
+
+    const copyright = document.createElement('span')
+    copyright.textContent = "Copyright"
+    footerContainer.appendChild(copyright)
+
+    const socialMediaContainer = document.createElement('div')
+    footerContainer.appendChild(socialMediaContainer)
+
+    const socialMedia = document.createElement('div')
+    socialMedia.textContent = "Icon"
+    socialMediaContainer.appendChild(socialMedia)
+
+    return footer
 }
