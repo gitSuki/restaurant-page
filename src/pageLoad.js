@@ -3,6 +3,7 @@ export default function buildPage(){
 
     pageDiv.appendChild(buildTopBar())
     pageDiv.appendChild(buildNav())
+    pageDiv.appendChild(buildContent())
 
     return pageDiv
 }
@@ -34,6 +35,7 @@ function buildTopBar(){
     const socialMedia = document.createElement('div')
     socialMedia.textContent = "Icon"
     emailContainer.appendChild(socialMedia)
+
     return topBar
 }
 
@@ -60,4 +62,29 @@ function buildNav(){
     tabContainer.appendChild(contact)
 
     return navBar
+}
+
+function buildContent(){
+    const content = document.createElement('div')
+
+    const cursiveTitle = document.createElement('span')
+    cursiveTitle.textContent = "Cursive Title"
+    content.appendChild(cursiveTitle)
+
+    const title = document.createElement('span')
+    title.textContent = "Title"
+    content.appendChild(title)
+
+    const separator = document.createElement('hr')
+    content.appendChild(separator)
+
+    const description = document.createElement('p')
+    description.textContent = "Resturant Description"
+    content.appendChild(description)
+
+    const menuLink = document.createElement('button')
+    menuLink.textContent = "Menu"
+    content.appendChild(menuLink)
+
+    return content
 }
