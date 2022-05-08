@@ -1,7 +1,8 @@
-export default function buildPage() {
+export default function buildPage(){
     const pageDiv = document.createElement('div')
 
     pageDiv.appendChild(buildTopBar())
+    pageDiv.appendChild(buildNav())
 
     return pageDiv
 }
@@ -34,4 +35,29 @@ function buildTopBar(){
     socialMedia.textContent = "Icon"
     emailContainer.appendChild(socialMedia)
     return topBar
+}
+
+function buildNav(){
+    const navBar = document.createElement('div')
+
+    const logo = document.createElement('div')
+    logo.textContent = "Logo"
+    navBar.appendChild(logo)
+
+    const tabContainer = document.createElement('div')
+    navBar.appendChild(tabContainer)
+
+    const home = document.createElement('span')
+    home.textContent = "Home"
+    tabContainer.appendChild(home)
+
+    const menu = document.createElement('span')
+    menu.textContent = "Menu"
+    tabContainer.appendChild(menu)
+
+    const contact = document.createElement('span')
+    contact.textContent = "Contact"
+    tabContainer.appendChild(contact)
+
+    return navBar
 }
