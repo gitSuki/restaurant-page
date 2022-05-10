@@ -1,5 +1,8 @@
+import './style.css';
+
 export default function buildPage(){
     const pageDiv = document.createElement('div')
+    pageDiv.classList.add('test')
     pageDiv.appendChild(buildTopBar())
     pageDiv.appendChild(buildNav())
     pageDiv.appendChild(buildContent())
