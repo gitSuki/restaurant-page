@@ -1,4 +1,6 @@
 import './style.css';
+import logoFile from './Gokumiya.png';
+
 
 export default function buildPage(){
     const pageDiv = document.createElement('div')
@@ -45,8 +47,8 @@ function buildTopBar(){
 function buildNav(){
     const navBar = document.createElement('div')
 
-    const logo = document.createElement('div')
-    logo.textContent = "Logo"
+    const logo = new Image()
+    logo.src = logoFile
     navBar.appendChild(logo)
 
     const tabContainer = document.createElement('div')
