@@ -67,16 +67,7 @@ function buildNav(){
 function buildContent(){
     const content = document.createElement('div')
 
-    const cursiveTitle = document.createElement('span')
-    cursiveTitle.textContent = "Cursive Title"
-    content.appendChild(cursiveTitle)
-
-    const title = document.createElement('span')
-    title.textContent = "Title"
-    content.appendChild(title)
-
-    const separator = document.createElement('hr')
-    content.appendChild(separator)
+    content.appendChild(buildTitle())
 
     const description = document.createElement('p')
     description.textContent = "Resturant Description"
@@ -85,6 +76,27 @@ function buildContent(){
     const menuLink = document.createElement('button')
     menuLink.textContent = "Menu"
     content.appendChild(menuLink)
+
+    return content
+}
+
+function buildTitle(){
+    const content = document.createElement('div')
+
+    const cursiveTitle = document.createElement('span')
+    cursiveTitle.textContent = "Welcome to,"
+    content.appendChild(cursiveTitle)
+
+    const romajiTitle = document.createElement('span')
+    romajiTitle.textContent = "Gokumiya Izukaya"
+    content.appendChild(romajiTitle)
+
+    const kanjiTitle = document.createElement('span')
+    kanjiTitle.textContent = "極味屋居酒屋" //gokumiya izukaya
+    content.appendChild(kanjiTitle)
+
+    const separator = document.createElement('hr')
+    content.appendChild(separator)
 
     return content
 }
