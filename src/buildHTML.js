@@ -106,14 +106,17 @@ function tabs(){
     const home = document.createElement('span')
     home.textContent = "Home"
     tabContainer.appendChild(home)
+    home.id = "home"
 
     const menu = document.createElement('span')
     menu.textContent = "Menu"
     tabContainer.appendChild(menu)
+    menu.id = "menu"
 
     const contact = document.createElement('span')
     contact.textContent = "Contact"
     tabContainer.appendChild(contact)
+    contact.id = "contact"
 
     tabContainer.classList.add("nav-tabs")
     return tabContainer
