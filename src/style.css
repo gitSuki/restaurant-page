@@ -20,7 +20,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -49,9 +48,22 @@ table {
 
 /* Custom CSS below */
 
+@font-face {
+  font-family: herrVonMuellerhoff;
+  src: url(./resources/HerrVonMuellerhoff-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./resources/Montserrat-VariableFont_wght.ttf);
+}
+
 * {
   box-sizing: border-box;
+  font-family: Montserrat;
 }
+
+
 
 .header {
   display: flex;
@@ -90,4 +102,18 @@ table {
   display: flex;
   gap: 5em;
   font-size: 28px;
+}
+
+.title {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}
+
+.title-cursive {
+  font-family: herrVonMuellerhoff;
+  font-size: 100px;
+  margin-bottom: -0.2em;
 }

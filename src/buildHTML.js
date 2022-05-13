@@ -13,7 +13,7 @@ export default function buildPage(){
     const page = document.createElement('div')
     page.appendChild(header())
     page.appendChild(navBar())
-    page.appendChild(buildContent())
+    page.appendChild(content())
     page.appendChild(buildFooter())
 
     return page
@@ -121,42 +121,53 @@ function tabs(){
 
 
 
-function buildContent(){
+function content(){
+    // main page content that includes name and link to menu
     const content = document.createElement('div')
-
-    content.appendChild(buildTitle())
-
-    const description = document.createElement('p')
-    description.textContent = "Resturant Description"
-    content.appendChild(description)
-
-    const menuLink = document.createElement('button')
-    menuLink.textContent = "Menu"
-    content.appendChild(menuLink)
+    content.appendChild(title())
+    content.appendChild(description())
 
     return content
 }
 
-function buildTitle(){
-    const content = document.createElement('div')
+function title(){
+    const titleContainer = document.createElement('div')
 
-    const cursiveTitle = document.createElement('span')
-    cursiveTitle.textContent = "Welcome to,"
-    content.appendChild(cursiveTitle)
-
-    const romajiTitle = document.createElement('span')
-    romajiTitle.textContent = "Gokumiya Izukaya"
-    content.appendChild(romajiTitle)
+    const titleIntro = document.createElement('span')
+    titleIntro.textContent = "Welcome to,"
+    titleContainer.appendChild(titleIntro)
+    titleIntro.classList.add("title-cursive")
 
     const kanjiTitle = document.createElement('span')
-    kanjiTitle.textContent = "極味屋居酒屋" //gokumiya izukaya
-    content.appendChild(kanjiTitle)
+    kanjiTitle.textContent = "極味屋" //gokumiya
+    titleContainer.appendChild(kanjiTitle)
+
+    const romajiTitle = document.createElement('span')
+    romajiTitle.textContent = "Gokumiya"
+    titleContainer.appendChild(romajiTitle)
 
     const separator = document.createElement('hr')
-    content.appendChild(separator)
+    titleContainer.appendChild(separator)
 
-    return content
+    titleContainer.classList.add("title")
+    return titleContainer
 }
+
+function description(){
+    const descriptionContainer = document.createElement('div')
+
+    const description = document.createElement('p')
+    description.textContent = "Authentic Japanese Cuisine"
+    descriptionContainer.appendChild(description)
+
+    const menuLink = document.createElement('button')
+    menuLink.textContent = "Check out our menu!"
+    descriptionContainer.appendChild(menuLink)
+
+    return descriptionContainer
+}
+
+
 
 function buildFooter(){
     const footer = document.createElement('div')
