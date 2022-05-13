@@ -1,10 +1,13 @@
 import './style.css';
 import logoFile from './Gokumiya.png';
+import instagramIcon from './instagram.svg';
+import facebookIcon from './facebook.svg';
+import twitterIcon from './twitter.svg';
+import googleMapsIcon from './maps.svg';
 
 
 export default function buildPage(){
     const pageDiv = document.createElement('div')
-    pageDiv.classList.add('test')
     pageDiv.appendChild(buildTopBar())
     pageDiv.appendChild(buildNav())
     pageDiv.appendChild(buildContent())
@@ -16,15 +19,12 @@ export default function buildPage(){
 function buildTopBar(){
     const topBar = document.createElement('div')
 
-    const topContainer = document.createElement('div')
-    topBar.appendChild(topContainer)
-
     const phoneNumber = document.createElement('span')
     phoneNumber.textContent = "Phone Number"
-    topContainer.appendChild(phoneNumber)
+    topBar.appendChild(phoneNumber)
 
     const emailContainer = document.createElement('div')
-    topContainer.appendChild(emailContainer)
+    topBar.appendChild(emailContainer)
 
     const eMailIcon = document.createElement('div')
     eMailIcon.textContent = "Icon"
@@ -34,14 +34,33 @@ function buildTopBar(){
     eMailAddress.textContent = "E-Mail"
     emailContainer.appendChild(eMailAddress)
 
-    const socialMediaContainer = document.createElement('div')
-    topContainer.appendChild(socialMediaContainer)
+    topBar.appendChild(socialMediaLinks())
 
-    const socialMedia = document.createElement('div')
-    socialMedia.textContent = "Icon"
-    socialMediaContainer.appendChild(socialMedia)
+    topBar.classList.add("header")
 
     return topBar
+}
+
+function socialMediaLinks(){
+    const socialMediaContainer = document.createElement('div')
+    
+    const instagram = new Image()
+    instagram.src = instagramIcon
+    socialMediaContainer.appendChild(instagram)
+
+    const facebook = new Image()
+    facebook.src = facebookIcon
+    socialMediaContainer.appendChild(facebook)
+
+    const twitter = new Image()
+    twitter.src = twitterIcon
+    socialMediaContainer.appendChild(twitter)
+
+    const googleMaps = new Image()
+    googleMaps.src = googleMapsIcon
+    socialMediaContainer.appendChild(googleMaps)
+
+    return socialMediaContainer
 }
 
 function buildNav(){
