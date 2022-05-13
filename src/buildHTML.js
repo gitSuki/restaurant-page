@@ -1,25 +1,26 @@
 import './style.css';
-import logoFile from './Gokumiya.png';
-import emailIcon from './email.svg';
-import instagramIcon from './instagram.svg';
-import facebookIcon from './facebook.svg';
-import twitterIcon from './twitter.svg';
-import googleMapsIcon from './maps.svg';
+import logoFile from './resources/Gokumiya.png';
+import emailIcon from './resources/email.svg';
+import instagramIcon from './resources/instagram.svg';
+import facebookIcon from './resources/facebook.svg';
+import twitterIcon from './resources/twitter.svg';
+import googleMapsIcon from './resources/maps.svg';
 
 
 export default function buildPage(){
-    const pageDiv = document.createElement('div')
-    pageDiv.appendChild(header())
-    pageDiv.appendChild(buildNav())
-    pageDiv.appendChild(buildContent())
-    pageDiv.appendChild(buildFooter())
+    // links all the main html elements to the page
+    const page = document.createElement('div')
+    page.appendChild(header())
+    page.appendChild(buildNav())
+    page.appendChild(buildContent())
+    page.appendChild(buildFooter())
 
-    return pageDiv
+    return page
 }
 
 function header(){
+    // header at the top of page to display contact info
     const header = document.createElement('div')
-
     header.appendChild(phoneNumber())
     header.appendChild(email())
     header.appendChild(socialMedia())
@@ -70,6 +71,7 @@ function socialMedia(){
 
     return socialMediaContainer
 }
+
 
 function buildNav(){
     const navBar = document.createElement('div')
