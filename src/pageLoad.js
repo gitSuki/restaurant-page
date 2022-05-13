@@ -1,5 +1,6 @@
 import './style.css';
 import logoFile from './Gokumiya.png';
+import emailIcon from './email.svg';
 import instagramIcon from './instagram.svg';
 import facebookIcon from './facebook.svg';
 import twitterIcon from './twitter.svg';
@@ -8,7 +9,7 @@ import googleMapsIcon from './maps.svg';
 
 export default function buildPage(){
     const pageDiv = document.createElement('div')
-    pageDiv.appendChild(buildTopBar())
+    pageDiv.appendChild(header())
     pageDiv.appendChild(buildNav())
     pageDiv.appendChild(buildContent())
     pageDiv.appendChild(buildFooter())
@@ -16,32 +17,39 @@ export default function buildPage(){
     return pageDiv
 }
 
-function buildTopBar(){
-    const topBar = document.createElement('div')
+function header(){
+    const header = document.createElement('div')
 
-    const phoneNumber = document.createElement('span')
-    phoneNumber.textContent = "Phone Number"
-    topBar.appendChild(phoneNumber)
+    header.appendChild(phoneNumber())
+    header.appendChild(email())
+    header.appendChild(socialMedia())
 
-    const emailContainer = document.createElement('div')
-    topBar.appendChild(emailContainer)
+    header.classList.add("header")
 
-    const eMailIcon = document.createElement('div')
-    eMailIcon.textContent = "Icon"
-    emailContainer.appendChild(eMailIcon)
-
-    const eMailAddress = document.createElement('span')
-    eMailAddress.textContent = "E-Mail"
-    emailContainer.appendChild(eMailAddress)
-
-    topBar.appendChild(socialMediaLinks())
-
-    topBar.classList.add("header")
-
-    return topBar
+    return header
 }
 
-function socialMediaLinks(){
+function phoneNumber(){
+    const phoneNumber = document.createElement('span')
+    phoneNumber.textContent = "1 (111) 111-1111"
+    return phoneNumber
+}
+
+function email(){
+    const emailContainer = document.createElement('div')
+
+    const email = new Image()
+    email.src = emailIcon
+    emailContainer.appendChild(email)
+
+    const emailAddress = document.createElement('span')
+    emailAddress.textContent = "gokumiyaresturant@website.com"
+    emailContainer.appendChild(emailAddress)
+
+    return emailContainer
+}
+
+function socialMedia(){
     const socialMediaContainer = document.createElement('div')
     
     const instagram = new Image()
