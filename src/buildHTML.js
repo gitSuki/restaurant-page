@@ -12,7 +12,7 @@ export default function buildPage(){
     // links all the main html elements to the page
     const page = document.createElement('div')
     page.appendChild(header())
-    page.appendChild(buildNav())
+    page.appendChild(navBar())
     page.appendChild(buildContent())
     page.appendChild(buildFooter())
 
@@ -85,15 +85,23 @@ function socialMedia(){
 }
 
 
-function buildNav(){
+
+function navBar(){
+    // navigation bar that contains the logo and all the tabs
     const navBar = document.createElement('div')
 
     const logo = new Image()
     logo.src = logoFile
+    logo.classList.add("nav-logo")
     navBar.appendChild(logo)
+    navBar.appendChild(tabs())
 
+    navBar.classList.add("nav-bar")
+    return navBar
+}
+
+function tabs(){
     const tabContainer = document.createElement('div')
-    navBar.appendChild(tabContainer)
 
     const home = document.createElement('span')
     home.textContent = "Home"
@@ -107,8 +115,11 @@ function buildNav(){
     contact.textContent = "Contact"
     tabContainer.appendChild(contact)
 
-    return navBar
+    tabContainer.classList.add("nav-tabs")
+    return tabContainer
 }
+
+
 
 function buildContent(){
     const content = document.createElement('div')
