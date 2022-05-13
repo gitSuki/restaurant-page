@@ -148,6 +148,7 @@ function title(){
 
     const separator = document.createElement('hr')
     titleContainer.appendChild(separator)
+    separator.classList.add("title-line")
 
     titleContainer.classList.add("title")
     return titleContainer
@@ -172,21 +173,14 @@ function description(){
 
 
 function buildFooter(){
+    // footer that contains copyright and social media links
     const footer = document.createElement('div')
 
-    const footerContainer = document.createElement('div')
-    footer.appendChild(footerContainer)
-
     const copyright = document.createElement('span')
-    copyright.textContent = "Copyright"
-    footerContainer.appendChild(copyright)
+    copyright.textContent = "Copyright © 2022 - Gokumiya Corporation"
+    footer.appendChild(copyright)
+    footer.appendChild(socialMedia())
 
-    const socialMediaContainer = document.createElement('div')
-    footerContainer.appendChild(socialMediaContainer)
-
-    const socialMedia = document.createElement('div')
-    socialMedia.textContent = "Icon"
-    socialMediaContainer.appendChild(socialMedia)
-
+    footer.classList.add('footer')
     return footer
 }
