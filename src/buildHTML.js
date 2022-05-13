@@ -163,7 +163,9 @@ function description(){
     const menuLink = document.createElement('button')
     menuLink.textContent = "Check out our menu!"
     descriptionContainer.appendChild(menuLink)
+    menuLink.classList.add("menu-link")
 
+    descriptionContainer.classList.add("description")
     return descriptionContainer
 }
 
