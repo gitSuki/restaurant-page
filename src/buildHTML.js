@@ -1,5 +1,6 @@
 import './style.css';
 import logoFile from './resources/Gokumiya.png';
+import phoneIcon from './resources/phone.svg';
 import emailIcon from './resources/email.svg';
 import instagramIcon from './resources/instagram.svg';
 import facebookIcon from './resources/facebook.svg';
@@ -31,9 +32,18 @@ function header(){
 }
 
 function phoneNumber(){
+    const phoneNumberContainer = document.createElement('div')
+
+    const phone = new Image()
+    phone.src = phoneIcon
+    phoneNumberContainer.appendChild(phone)
+
     const phoneNumber = document.createElement('span')
     phoneNumber.textContent = "1 (111) 111-1111"
-    return phoneNumber
+    phoneNumberContainer.appendChild(phoneNumber)
+
+    phoneNumberContainer.classList.add("phone")
+    return phoneNumberContainer
 }
 
 function email(){
@@ -47,6 +57,7 @@ function email(){
     emailAddress.textContent = "gokumiyaresturant@website.com"
     emailContainer.appendChild(emailAddress)
 
+    emailContainer.classList.add("email")
     return emailContainer
 }
 
@@ -69,6 +80,7 @@ function socialMedia(){
     googleMaps.src = googleMapsIcon
     socialMediaContainer.appendChild(googleMaps)
 
+    socialMediaContainer.classList.add("social-media")
     return socialMediaContainer
 }
 
