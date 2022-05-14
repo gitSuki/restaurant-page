@@ -55,7 +55,7 @@ function email(){
     emailContainer.appendChild(email)
 
     const emailAddress = document.createElement('span')
-    emailAddress.textContent = "gokumiyaresturant@website.com"
+    emailAddress.textContent = "gokumiyaresturant@email.com"
     emailContainer.appendChild(emailAddress)
 
     emailContainer.classList.add("email")
