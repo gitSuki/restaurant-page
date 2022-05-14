@@ -8,7 +8,7 @@ import twitterIcon from './resources/twitter.svg';
 import googleMapsIcon from './resources/maps.svg';
 
 
-export default function buildPage(){
+function buildPage(){
     // links all the main html elements to the page
     const page = document.createElement('div')
     page.appendChild(header())
@@ -189,3 +189,5 @@ function buildFooter(){
     footer.classList.add('footer')
     return footer
 }
+
+export default buildPage

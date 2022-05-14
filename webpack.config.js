@@ -5,14 +5,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    index: './src/buildHTML.js',
-    index: './src/home.js',
-    index: './src/contact.js',
+    buildHTML: './src/buildHTML.js',
+    home: './src/home.js',
+    contact: './src/contact.js',
   },
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Resturant',
+      title: 'Restaurant',
     }),
   ],
   output: {
