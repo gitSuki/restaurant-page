@@ -190,4 +190,5 @@ function buildFooter(){
     return footer
 }
 
+export {content}
 export default buildPage

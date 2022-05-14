@@ -5,6 +5,8 @@ export default function buildContactTab(){
     const oldContent = document.getElementById("content")
 
     const newContent = document.createElement('div')
+    newContent.id = "content"
+    
     const contactTitle = document.createElement('span')
     contactTitle.textContent = "Contact Us!"
     newContent.appendChild(contactTitle)

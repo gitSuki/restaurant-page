@@ -1,3 +1,5 @@
+import {content} from './buildHTML';
+
 export default function buildHomeTab(){
     const page = document.getElementById("page")
     const oldContent = document.getElementById("content")
