@@ -5,6 +5,7 @@ import buildContactTab from './contact.js';
 
 document.body.appendChild(buildPage())
 
+let contactLink = document.getElementById('contact-link')
 const homeTab = document.getElementById("home")
 const menuTab = document.getElementById("menu")
 const contactTab = document.getElementById("contact")
@@ -16,6 +17,10 @@ for (const item of tabList) {
     item.addEventListener("click", () => {
         if (item.textContent == "Home"){
             buildHomeTab()
+            // adds a new event listener to the contact button when the home tab
+            // is refreshed
+            contactLink = document.getElementById('contact-link')
+            contactLink.addEventListener('click', () => buildContactTab())
         }
         else if (item.textContent == "Menu"){
             buildMenuTab()
@@ -25,3 +30,5 @@ for (const item of tabList) {
         }
     })
 }
+
+contactLink.addEventListener('click', () => buildContactTab())

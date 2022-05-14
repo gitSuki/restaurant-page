@@ -166,10 +166,10 @@ function description(){
     description.textContent = "Authentic Japanese Cuisine"
     descriptionContainer.appendChild(description)
 
-    const menuLink = document.createElement('button')
-    menuLink.textContent = "Check out our menu!"
-    descriptionContainer.appendChild(menuLink)
-    menuLink.classList.add("menu-link")
+    const contactLink = document.createElement('button')
+    contactLink.textContent = "Book a reservation now!"
+    descriptionContainer.appendChild(contactLink)
+    contactLink.id = "contact-link"
 
     descriptionContainer.classList.add("description")
     return descriptionContainer

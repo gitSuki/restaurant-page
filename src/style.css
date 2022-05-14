@@ -135,7 +135,7 @@ table {
   text-align: center;
 }
 
-.menu-link {
+#contact-link {
   font-size: 20px;
   margin-top: 2em;
   padding: 15px;
@@ -150,6 +150,11 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: center;
 }
 
 .contact-content {

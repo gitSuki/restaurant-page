@@ -8,7 +8,8 @@ export default function buildMenuTab(){
     newContent.id = "content"
     
     const menutitle = document.createElement('span')
-    menutitle.textContent = "Menu"
+    menutitle.textContent = "UNDER CONSTRUCTION"
+    menutitle.classList.add("menu-title")
     newContent.appendChild(menutitle)
 
     page.replaceChild(newContent, oldContent)
