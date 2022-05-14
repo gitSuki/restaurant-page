@@ -189,7 +189,16 @@ table {
   margin-top: 2em;
   padding: 15px;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
+  background-color: #e6b977;
+  transition: 0.35s;
+}
+
+#contact-link:hover {
+  font-size: 25px;
+  margin-top: 1.5em;
+  color: white;
+  background-color: #ef4444;
 }
 
 .footer {
