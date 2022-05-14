@@ -144,7 +144,7 @@ table {
   align-items: center;
 }
 
-.contact-content {
+.contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,12 +154,23 @@ table {
   font-size: 30px;
 }
 
-.contact-container {
+.time-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
   background-color: blue;
   padding: 1em;
   gap: 1em;
+  font-size: 20px;
+}
+
+input {
+  font-size: 20px;
 }
 
 .name-container {
