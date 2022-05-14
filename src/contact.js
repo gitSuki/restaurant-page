@@ -1,5 +1,6 @@
 import './style.css';
 import clockIcon from './resources/clock.svg';
+import emailIcon from './resources/email.svg';
 
 export default function buildContactTab(){
     const page = document.getElementById("page")
@@ -9,7 +10,7 @@ export default function buildContactTab(){
     newContent.id = "content"
     newContent.appendChild(contactTitle())
     newContent.appendChild(contactContent())
-    newContent.classList.add("contact-container")
+    newContent.classList.add("contact-content")
 
     page.replaceChild(newContent, oldContent)
 }
@@ -26,8 +27,10 @@ function contactContent(){
     const contactContainer = document.createElement('div')
 
     contactContainer.appendChild(hours())
+    contactContainer.appendChild(messageUs())
     contactContainer.appendChild(contactForm())
 
+    contactContainer.classList.add("contact-container")
     return contactContainer
 }
 
@@ -43,6 +46,8 @@ function hours(){
     const timeText = document.createElement('span')
     timeText.textContent = "Times"
     titleContainer.appendChild(timeText)
+
+    titleContainer.classList.add("times")
 
     const hoursContainer = document.createElement('div')
     hoursContainer.classList.add("time-container")
@@ -107,6 +112,21 @@ function hours(){
     container.appendChild(hoursContainer)
 
     return container
+}
+
+function messageUs(){
+    const messageUsContainer = document.createElement('div')
+
+    const message = new Image()
+    message.src = emailIcon
+    messageUsContainer.appendChild(message)
+
+    const text = document.createElement('span')
+    text.textContent = "Message us"
+    messageUsContainer.appendChild(text)
+
+    messageUsContainer.classList.add("message-us")
+    return messageUsContainer
 }
 
 function contactForm(){
