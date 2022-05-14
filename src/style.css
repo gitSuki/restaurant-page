@@ -103,6 +103,7 @@ table {
   height: 8em;
   color: white;
   background-image: linear-gradient(to right, rgba(250, 250, 250, 0.9), rgba(25, 25, 25, 0.4) 60%);
+  transition: 1s;
 }
 
 .nav-logo {
@@ -117,8 +118,45 @@ table {
   gap: 5em;
   font-size: 28px;
 }
+
+#home,
+#menu,
+#contact {
+  display: inline-block;
+  position: relative;
+  transition: 0.25s;
+}
+
+#home:hover,
+#menu:hover,
+#contact:hover {
+  color: #ef4444;
+}
+
+#home:after,
+#menu:after,
+#contact:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #e6b977;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#home:hover:after,
+#menu:hover:after,
+#contact:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .title {
-  margin-top: 1.5em;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,11 +168,14 @@ table {
   font-family: herrVonMuellerhoff;
   font-size: 110px;
   margin-bottom: -0.2em;
+  color: #e6b977;
+
 }
 
 .title-line {
-  border-top: 5px solid;
+  border-top: 5px solid #e6b977;
   width: 8em;
+
 }
 
 .description {
@@ -165,6 +206,9 @@ table {
 .menu-title {
   display: flex;
   justify-content: center;
+  margin-top: 4em;
+  font-size: 60px;
+  color: white;
 }
 
 .contact-content {
