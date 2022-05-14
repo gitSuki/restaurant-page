@@ -68,7 +68,7 @@ table {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(resources/寺院.jpg);
+  background-image: url(resources/寺院.png);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -140,6 +140,7 @@ table {
 .description {
   font-size: 30px;
   text-align: center;
+  color: white;
 }
 
 #contact-link {
@@ -152,11 +153,13 @@ table {
 
 .footer {
   margin-top: auto;
-  margin-left: 10em;
-  margin-right: 10em;
+  padding: 0.25em;
+  padding-left: 10em;
+  padding-right: 10em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(250, 250, 250);
 }
 
 .menu-title {
