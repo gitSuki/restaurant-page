@@ -68,6 +68,9 @@ table {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url(resources/寺院.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {
