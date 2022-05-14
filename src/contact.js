@@ -27,6 +27,8 @@ function contactContent(){
     contactContainer.setAttribute("method", "post")
 
     contactContainer.appendChild(name())
+    contactContainer.appendChild(email())
+    contactContainer.appendChild(message())
     contactContainer.classList.add("contact-container")
 
     return contactContainer
@@ -58,4 +60,22 @@ function lastName(){
     nameInput.setAttribute("placeholder", "Last Name")
 
     return nameInput
+}
+
+function email(){
+    const emailInput = document.createElement('input')
+    emailInput.setAttribute("type", "text")
+    emailInput.setAttribute("name", "email")
+    emailInput.setAttribute("placeholder", "E-Mail Address")
+
+    return emailInput
+}
+
+function message(){
+    const messageInput = document.createElement('input')
+    messageInput.setAttribute("type", "text")
+    messageInput.setAttribute("name", "email")
+    messageInput.setAttribute("placeholder", "Type your message...")
+
+    return messageInput
 }
