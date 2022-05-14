@@ -22,12 +22,11 @@ function contactTitle(){
 }
 
 function contactContent(){
+    // container that includes the form where user can input name, email, and message
     const contactContainer = document.createElement('form')
     contactContainer.setAttribute("method", "post")
 
-
     contactContainer.appendChild(name())
-
     contactContainer.classList.add("contact-container")
 
     return contactContainer
@@ -36,11 +35,27 @@ function contactContent(){
 function name(){
     const nameContainer = document.createElement('div')
 
-    const nameInput = document.createElement('input')
-    nameInput.setAttribute("type", "text")
-    nameInput.setAttribute("name", "name")
-    nameInput.setAttribute("placeholder", "name")
-    nameContainer.appendChild(nameInput)
+    nameContainer.appendChild(firstName())
+    nameContainer.appendChild(lastName())
+    nameContainer.classList.add("name-container")
 
     return nameContainer
+}
+
+function firstName(){
+    const nameInput = document.createElement('input')
+    nameInput.setAttribute("type", "text")
+    nameInput.setAttribute("name", "first_name")
+    nameInput.setAttribute("placeholder", "First Name")
+
+    return nameInput
+}
+
+function lastName(){
+    const nameInput = document.createElement('input')
+    nameInput.setAttribute("type", "text")
+    nameInput.setAttribute("name", "last_name")
+    nameInput.setAttribute("placeholder", "Last Name")
+
+    return nameInput
 }
