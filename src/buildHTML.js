@@ -16,6 +16,7 @@ export default function buildPage(){
     page.appendChild(content())
     page.appendChild(buildFooter())
 
+    page.id = "page"
     return page
 }
 
@@ -130,6 +131,7 @@ function content(){
     content.appendChild(title())
     content.appendChild(description())
 
+    content.id = "content"
     return content
 }
 

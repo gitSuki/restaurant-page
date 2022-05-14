@@ -1,4 +1,5 @@
 import buildPage from './buildHTML.js';
+import buildContactTab from './contact.js';
 
 document.body.appendChild(buildPage())
 
@@ -18,7 +19,7 @@ for (const item of tabList) {
             console.log("Menu")
         }
         else if (item.textContent == "Contact"){
-            console.log("Contact")
+            buildContactTab()
         }
     })
 }
