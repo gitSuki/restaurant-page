@@ -71,7 +71,7 @@ table {
   background-image: url(resources/寺院.png);
   background-attachment: fixed;
   background-size: cover;
-  transition: 0.75s;
+  transition: 0.5s;
 }
 
 .header {

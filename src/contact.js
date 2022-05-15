@@ -1,7 +1,7 @@
 import './style.css';
 import clockIcon from './resources/clock.svg';
 import emailIcon from './resources/email.svg';
-import restaurantStaff from './resources/店長.jpg';
+import restaurantStaff from './resources/店長.png';
 
 export default function buildContactTab(){
     const page = document.getElementById("page")
