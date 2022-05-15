@@ -42,6 +42,7 @@ function phoneNumber(){
     const phoneNumber = document.createElement('span')
     phoneNumber.textContent = "1 (111) 111-1111"
     phoneNumberContainer.appendChild(phoneNumber)
+    phoneNumber.classList.add("header-text")
 
     phoneNumberContainer.classList.add("phone")
     return phoneNumberContainer
@@ -57,6 +58,7 @@ function email(){
     const emailAddress = document.createElement('span')
     emailAddress.textContent = "gokumiyaresturant@email.com"
     emailContainer.appendChild(emailAddress)
+    emailAddress.classList.add("header-text")
 
     emailContainer.classList.add("email")
     return emailContainer

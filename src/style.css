@@ -81,8 +81,16 @@ table {
   padding: 0.2em;
 }
 
+.header-text {
+  transition: 0.3s;
+}
+
+.header-text:hover {
+  color: white;
+}
+
 .phone {
-  margin-left: 20em;
+  margin-left: 15%;
 }
 
 .email,
