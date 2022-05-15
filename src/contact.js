@@ -1,6 +1,7 @@
 import './style.css';
 import clockIcon from './resources/clock.svg';
 import emailIcon from './resources/email.svg';
+import restaurantStaff from './resources/店長.jpg';
 
 export default function buildContactTab(){
     const page = document.getElementById("page")
@@ -11,6 +12,8 @@ export default function buildContactTab(){
     newContent.appendChild(contactTitle())
     newContent.appendChild(contactContent())
     newContent.classList.add("contact-content")
+
+    page.style.backgroundImage = `url(${restaurantStaff})`
 
     page.replaceChild(newContent, oldContent)
 }
