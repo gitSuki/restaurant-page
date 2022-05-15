@@ -1,4 +1,5 @@
 import './style.css';
+import restaurantInterior from './resources/店内.png';
 
 export default function buildMenuTab(){
     const page = document.getElementById("page")
@@ -11,6 +12,8 @@ export default function buildMenuTab(){
     menutitle.textContent = "UNDER CONSTRUCTION"
     menutitle.classList.add("menu-title")
     newContent.appendChild(menutitle)
+
+    page.style.backgroundImage = `url(${restaurantInterior})`
 
     page.replaceChild(newContent, oldContent)
 }
