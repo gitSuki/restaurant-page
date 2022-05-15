@@ -246,12 +246,13 @@ table {
 .contact-container {
   display: flex;
   flex-direction: column;
+  font-size: 20px;
   margin-top: 1.5em;
   padding: 2em;
   padding-left: 5em;
   padding-right: 5em;
   gap: 1em;
-  background-color: rgba(250, 250, 250, 0.6);
+  background-color: rgba(250, 250, 250, 0.7);
 }
 
 .time-container {
@@ -270,4 +271,19 @@ table {
 .name-container {
   display: flex;
   gap: 1em;
+}
+
+.send-button {
+  font-size: 20px;
+  margin-top: 1em;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e6b977;
+  transition: 0.35s;
+}
+
+.send-button:hover {
+  color: white;
+  background-color: #ef4444;
 }

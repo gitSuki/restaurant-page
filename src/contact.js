@@ -199,7 +199,8 @@ function message(){
 function sendButton(){
     const sendButton = document.createElement('input')
     sendButton.setAttribute("type", "submit")
-    sendButton.setAttribute("value", "send")
+    sendButton.setAttribute("value", "Send")
+    sendButton.classList.add("send-button")
 
     return sendButton
 }
